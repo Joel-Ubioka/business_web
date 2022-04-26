@@ -30,6 +30,12 @@
          justify-items: center;
      }
 
+      /*HEADING*/
+      h1, h2, h3, h4, h5, h6
+      {
+        margin: 0 0 5px 0;
+      }
+
     /*Navigation Bar Styling*/
     
     .header_container .dropdown_item
@@ -325,7 +331,33 @@
     {
         display: block;
     }
+ /*FORM*/
+ .form_container
+ {
+     background-color: white;
+     box-shadow: 0px 0px 10px silver;
+     max-width: 600px;
+     margin: auto;
+     padding: 50px;
+ }
 
+ .form_control
+ {
+     padding: 5px 0px;
+ }
+
+ .form_input
+ {
+     width: 100%;
+     font-size: 16px;
+     padding: 5px 10px;
+ }
+
+ .form_container h2
+ {
+     text-align: center;
+     color: gold;
+ }
 
   /*Responsive Media Querry*/
 @media only screen and (max-width:1246px)
