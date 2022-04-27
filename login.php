@@ -4,24 +4,14 @@
 
 <body>
     <?php require "includes/header2.php"; ?>
-    <div class="title">REGISTER</div>
+    <div class="title">LOGIN</div>
     <div class="main_container">
 
         <div class="main_body">
             <div class="form_container">
                 <form action="" method="POST">
 
-                    <h2>Register</h2>
-
-                    <div class="form_control">
-                        <p>FULL NAME :</p>
-                        <input type="text" name="full_name" class="form_input" required>
-                    </div>
-
-                    <div class="form_control">
-                        <p>PHONE NUMBER :</p>
-                        <input type="tel" name="phone_number" class="form_input" required>
-                    </div>
+                    <h2>Login</h2>
 
                     <div class="form_control">
                         <p>EMAIL :</p>
@@ -34,7 +24,7 @@
                     </div>
 
                     <div class="form_control">
-                        <input type="submit" name="register" class="form_button" value="Register">
+                        <input type="submit" name="login" class="form_button" value="Login">
                     </div>
                 </form>
             </div>
