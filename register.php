@@ -11,6 +11,30 @@
             <div class="form_container">
                 <form action="./funtions/reg_function.php" method="POST">
 
+                    <?php
+
+                        if(isset($_GET['success']))
+                        {
+                            echo "<span class='success_message'>Successfully Registered!</span>";
+                        }
+                        if(isset($_GET['error']))
+                        {
+                            if($_GET['error'] == "failed")
+                            {
+                                echo "<span class='error_message'>Registration Failed</span>";
+                            }
+                            elseif($_GET['error'] == "wrong-password")
+                            {
+                                echo "<span class='error_message'>password do not match</span>";
+                            }
+                            elseif($_GET['error'] == "user-exist")
+                            {
+                                echo "<span class='error_message'>you are already registered</span>";
+                            }
+                        }
+                        ?>
+
+
                     <h2>Register</h2>
 
                     <div class="form_control">

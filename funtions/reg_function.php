@@ -13,23 +13,34 @@ if(isset($_POST['register']))
     date_default_timezone_set("Africa/Lagos");
     $date = date(" M d  Y");
     $time = date("h:ia");
+
+    //check if the email or phone number already exist
     
-    if($password == $confirm_password)
+    $check_user = mysqli_query($conn, "SELECT * FROM users where email = '$email' OR phone_number = '$phone_number'");
+    if(mysqli_num_rows($check_user) > 0)
     {
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        $insert = mysqli_query($conn, "INSERT INTO  users(full_name, phone_number, email, password, date, time) VALUES('$full_name', '$phone_number', '$email', '$password', '$date', '$time') ");
-        
-        if(!$insert)
-        {
-            header('location: ../register.php?error=failed');
-        }
-        else
-        {
-            header('location: ../register.php?error=success');
-        }
+        header('location: ../register.php?error=user-exist');
     }
     else
     {
-        header('location: ../register.php?error=wrong-password');
+    
+        if($password == $confirm_password)
+        {
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+            $insert = mysqli_query($conn, "INSERT INTO  users(full_name, phone_number, email, password, date, time) VALUES('$full_name', '$phone_number', '$email', '$hashed_password', '$date', '$time') ");
+            
+            if(!$insert)
+            {
+                header('location: ../register.php?error=failed');
+            }
+            else
+            {
+                header('location: ../register.php?success');
+            }
+        }
+            else
+            {
+                header('location: ../register.php?error=wrong-password');
+            }
     }
 }

@@ -380,6 +380,27 @@
      color: white;
  }
 
+ /*ALERT MESSAGE*/
+ .success_message
+ {
+     display: block;
+     padding: 10px 20px;
+     background-color: #DCF8C6;
+     color: #003200;
+     border-radius: 4px;
+     margin-bottom: 10px;
+ }
+
+ .error_message
+ {
+     display: block;
+     padding: 10px 20px;
+     background-color: #fffacd;
+     color: red;
+     border-radius: 4px;
+     margin-bottom: 10px;
+ }
+
   /*Responsive Media Querry*/
 @media only screen and (max-width:1246px)
 {
