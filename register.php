@@ -9,7 +9,7 @@
 
         <div class="main_body">
             <div class="form_container">
-                <form action="" method="POST">
+                <form action="./funtions/reg_function.php" method="POST">
 
                     <h2>Register</h2>
 
@@ -31,6 +31,11 @@
                     <div class="form_control">
                         <p>PASSWORD :</p>
                         <input type="password" name="password" class="form_input" required>
+                    </div>
+
+                    <div class="form_control">
+                        <p>CONFIRM PASSWORD :</p>
+                        <input type="password" name="confirm_password" class="form_input" required>
                     </div>
 
                     <div class="form_control">
