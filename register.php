@@ -66,6 +66,8 @@
                         <input type="submit" name="register" class="form_button" value="Register">
                     </div>
                 </form>
+                <br>
+                <p>Already registered? <a href="login.php">Login</a></p>
             </div>
         </div><br><br>
 

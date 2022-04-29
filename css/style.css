@@ -16,6 +16,12 @@
          background-color: white;
      }
 
+
+        a
+        {
+            text-decoration: none;
+            color: gold;
+        }
      .top_bar_container
      {
         background-color: goldenrod;

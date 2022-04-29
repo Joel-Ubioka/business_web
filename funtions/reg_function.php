@@ -35,7 +35,8 @@ if(isset($_POST['register']))
             }
             else
             {
-                header('location: ../register.php?success');
+                //header('location: ../register.php?success');
+                header('location: ../login.php');
             }
         }
             else

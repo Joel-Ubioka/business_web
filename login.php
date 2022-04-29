@@ -9,8 +9,24 @@
 
         <div class="main_body">
             <div class="form_container">
-                <form action="" method="POST">
+                <form action="./funtions/login_function.php" method="POST">
 
+                    <?php
+
+                           
+                            if(isset($_GET['error']))
+                            {
+                                if($_GET['error'] == "no-user")
+                                {
+                                    echo "<span class='error_message'>You have not yet registered</span>";
+                                }
+                                elseif($_GET['error'] == "incorrect-password")
+                                {
+                                    echo "<span class='error_message'>Wrong password</span>";
+                                }
+                               
+                            }
+                            ?>
                     <h2>Login</h2>
 
                     <div class="form_control">
@@ -27,8 +43,10 @@
                         <input type="submit" name="login" class="form_button" value="Login">
                     </div>
                 </form>
-            </div>
-        </div><br><br>
+                <br>
+                <p>Not yet registered? <a href="register.php">Register here</a></p>
+
+            </div><br><br>
 
 
 </body>
