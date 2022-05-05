@@ -146,6 +146,11 @@
       .slider_container figure img{
           width: 20%;
       }
+
+      #register_form
+      {
+          padding: 50px;
+      }
      /* .slider_container
       {
           background-image: url(../images/slider/s.jpeg);

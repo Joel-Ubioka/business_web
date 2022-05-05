@@ -70,8 +70,10 @@
                 <p>Already registered? <a href="login.php">Login</a></p>
             </div>
         </div><br><br>
+    </div>
 
 
+    <?php include "includes/footer.php"; ?>
 </body>
 
 </html>

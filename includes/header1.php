@@ -5,4 +5,5 @@
     <title>Business_Website</title>
     <link rel="stylesheet" href="css/style.css?ver<?php echo microtime(); ?>">
     <script src="https://kit.fontawesome.com/27ae433552.js" crossorigin="anonymous"></script>
+
 </head>

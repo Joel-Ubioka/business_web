@@ -47,6 +47,11 @@
                 <p>Not yet registered? <a href="register.php">Register here</a></p>
 
             </div><br><br>
+        </div>
+    </div>
+
+
+    <?php include "includes/footer.php"; ?>
 
 
 </body>
