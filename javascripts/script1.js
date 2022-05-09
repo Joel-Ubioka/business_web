@@ -1,4 +1,22 @@
 
+// JSON object literal
+
+const courses = ["HTML", "CSS", "JavaScript"]  ;
+
+
+console.log(courses[2]);
+
+
+
+
+
+
+
+
+
+
+
+
 $("#register_form").on("submit", function(e){
     e.preventDefault();
     $("#submit").text('Loading...');

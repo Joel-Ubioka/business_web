@@ -1,0 +1,10 @@
+{
+
+    "name":"ubioka joel",
+    "age": 40,
+    "courses":{"HTML":10000, "CSS":5000, "JavaScript":20000},
+    "completed_courses":["HTML", "CSS", "JavaScript"],
+    "isFullStack":true,
+    "middlename":null
+
+}
