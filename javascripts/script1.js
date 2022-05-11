@@ -1,12 +1,36 @@
 
-// JSON object literal
+const costCourse = {HTML:10000, CSS:5000, JavaScript:20000};
+const costCourseStr = JSON.stringify(costCourse);
+window.location = "courses_process.php?coursesCost="+costCourseStr
 
+
+
+
+
+
+/*
+const ajax = new XMLHttpRequest();
+ajax.onload = function(){
+ const dataObj = JSON.parse(this.responseText );
+ console.log(dataObj.age);
+}
+ajax.open("GET", "javascripts/data_type.json");
+ajax.send();
+*/
+
+
+
+
+
+
+// JSON object literal
+/*
 const courses = ["HTML", "CSS", "JavaScript"]  ;
 
 
 console.log(courses[2]);
 
-
+*/
 
 
 
