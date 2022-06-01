@@ -117,3 +117,83 @@ html, body
 {
    padding: 5px 0;
 }
+
+.content_box
+{
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px silver;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 300px;
+    
+
+}
+
+.content_box:hover
+{
+    
+    box-shadow: 0 0 10px silver;
+    opacity: .9;
+    transition: .8;
+    
+    
+
+}
+
+.content_box i
+{
+    font-size: 40px;
+    color: white;
+
+}
+
+.content_box p
+{
+   font-size: 20px;
+   margin: 5px 0 0 0;
+   color: white;
+
+}
+
+.home_container
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home_container a
+{
+    flex-basis: 500px;
+    text-decoration: none;
+}
+
+.box_darkblue
+{
+    background-color: darkblue;
+}
+
+.box_darkred
+{
+    background-color: darkred;
+}
+
+.box_green
+{
+    background-color: green;
+}
+
+.box_orange
+{
+    background-color: orange;
+}
+
+.box_red
+{
+    background-color: red;
+}

@@ -1,4 +1,6 @@
+/*
 
+// this is controlling the datajson and courses_process.php so just uncommnet only this;
 const costCourse = {HTML:10000, CSS:5000, JavaScript:20000};
 const costCourseStr = JSON.stringify(costCourse);
 window.location = "courses_process.php?coursesCost="+costCourseStr
@@ -8,7 +10,7 @@ window.location = "courses_process.php?coursesCost="+costCourseStr
 
 
 
-/*
+
 const ajax = new XMLHttpRequest();
 ajax.onload = function(){
  const dataObj = JSON.parse(this.responseText );
