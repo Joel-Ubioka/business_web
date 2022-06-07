@@ -19,6 +19,8 @@ function get_title()
 // INCLUDE FILES TO  THE DASHBOARD
 function get_files()
 {
+    global $email, $conn;
+    
     if(isset($_GET['file']))
     {
         $file = $_GET['file'];

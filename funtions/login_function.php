@@ -2,6 +2,7 @@
 
 if(isset($_POST['login']))
 {
+    session_start();
     require "../config/config.php";
    
     $email = trim(mysqli_real_escape_string($conn, $_POST['email']));
@@ -24,6 +25,7 @@ if(isset($_POST['login']))
 
           if(password_verify($password,  $db_password))
           {
+              $_SESSION['email'] = $email;
               header('location:../dashboard.php');
           }
           else
