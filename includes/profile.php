@@ -44,7 +44,7 @@ if(mysqli_num_rows($select)>0)
 
 
      echo "
-     <a href='edit_profile.php?edit_id=$id' class='edit_profile_link'><button class ='primary_button'>Edit Profile</button></a>
+     <a href='dashboard.php?file=edit_profile.php&title=edit-profile&edit_id=$id' class='edit_profile_link'><button class ='primary_button'>Edit Profile</button></a>
     " ;
 }
 else
