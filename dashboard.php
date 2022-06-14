@@ -3,7 +3,16 @@ session_start();
  require "includes/dashboard_header.php"; 
  require "functions/functions.php";
  require "config/config.php";
- $email = $_SESSION['email'] ;
+
+ if(isset($_SESSION['email']))
+ {
+        $email = $_SESSION['email'] ;   
+ }
+ else
+ {
+        header('location: index.php');
+ }
+
   ?>
 
 <body>
@@ -102,6 +111,10 @@ session_start();
                                         <?php echo get_title(); ?></h2>
                         </div>
                         <div class="main_content">
+                                <div class="message_container">
+                                        <span class="success_msg"></span>
+                                        <span class="fail_msg"></span>
+                                </div>
                                 <?php 
                                 
                                  get_files();

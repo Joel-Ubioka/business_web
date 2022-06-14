@@ -9,12 +9,22 @@ if(mysqli_num_rows($select)>0)
      $full_name = $row['full_name'];
      $email = $row['email'];
      $phone_number = $row['phone_number'];
+     $profile = $row['profile'];
      $date = $row['date'];
      $time = $row['time'];
 
+     if(empty($profile))
+     {
+        $profile = "profile.png";
+     }
+     else
+     {
+        $profile =$profile;
+     }
+
      echo "
         <div class='profile_frame'>
-        <img src='images/profile/profile.png'>
+        <img src='images/profile/$profile'>
         </div>
      ";
      echo "<table class='table_format' border = '1'>";

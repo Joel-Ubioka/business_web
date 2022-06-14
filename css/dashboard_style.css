@@ -34,6 +34,7 @@ html, body
     padding-top: 80px;
     height: 100vh;
     background-color: white;
+    
 }
 
  .sidebar
@@ -46,6 +47,7 @@ html, body
  .main_body 
 {
     flex: 1;
+    overflow: auto;
   
     
 }
@@ -71,13 +73,15 @@ html, body
 
 .title_container
 {
-    background-color: #ffd700;
+    background-color: rgb(231, 212, 102);
     padding: 20px;
 }
 
 .main_content
 {
     padding: 10px;
+    overflow: auto;
+    height: 75vhF;
 }
 
 .sidebar_menu a
@@ -212,7 +216,15 @@ html, body
 .table_format td
 {
   padding: 10px;
-  border: none;
+  border: 1px solid silver;
+}
+
+.table_format th
+{
+  padding: 10px;
+  border: 1px solid silver;
+  background-color: gold;
+  vertical-align: text-top;
 }
 
 .table_format tr:nth-child(even)
@@ -297,3 +309,30 @@ html, body
      text-align: center;
      color: gold;
  }
+
+
+ /* ========== ALERT MESSAGE =========*/
+ .message_container
+ {
+    display: none;
+    margin: 20px 0;
+ }
+
+ .success_msg
+ {
+    display: none;
+    background: rgb(171, 200, 127);
+    padding: 10px;
+    color: green;
+ }
+
+ 
+ .fail_msg
+ {
+    display: none;
+    background: rgb(207, 247, 212);
+    padding: 10px;
+    color: rgb(2, 156, 31);
+ }
+ 
+

@@ -20,7 +20,24 @@ $("#profile_update_form").on("submit", function(e){
     ajax.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200)
         {
-            console.log(this.responseText);
+            $(".message_container").fadeIn();
+            
+            if(this.responseText == "Successfully Updated!")
+            {
+                $(".success_msg").fadeIn();
+                $(".success_msg").text(this.responseText);
+            }
+            else
+            {
+                $(".fail_msg").fadeIn();
+                $(".fail_msg").text(this.responseText);
+            }
+
+            setTimeout(function(){
+                $(".message_container").fadeOut();
+            },3000 );
+
+            $("#profile_update_button").html('Update');
         }
     }
 
