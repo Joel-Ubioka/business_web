@@ -219,12 +219,18 @@ html, body
   border: 1px solid silver;
 }
 
+.table_format td img
+{
+    width: 70px;
+}
+
 .table_format th
 {
   padding: 10px;
   border: 1px solid silver;
   background-color: gold;
   vertical-align: text-top;
+  white-space: nowrap;
 }
 
 .table_format tr:nth-child(even)
@@ -250,6 +256,52 @@ html, body
 }
 
 /* ==============BUTTONS =============*/
+
+button
+{
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+button:hover
+{
+    opacity: 1;
+    transition: .2s ease-in;
+}
+
+.edit_button
+{
+    background-color: darkblue;
+    color: white;
+    opacity: .9;
+    transition: .2s ease-in;
+}
+
+.status_button
+{
+    background-color: rgb(237, 154, 0);
+    color: white;
+    opacity: .9;
+    transition: .2s ease-in;
+}
+
+
+
+.delete_button
+{
+    background-color: red;
+    color: white;
+    opacity: .9;
+    transition: .2s ease-in;
+}
+
+
+
+
 .primary_button
 {
     background: gold;

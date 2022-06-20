@@ -13,6 +13,8 @@ session_start();
         header('location: index.php');
  }
 
+ $select_admin = mysqli_query($conn, "SELECT * FROM users WHERE email='$email'and status = 'Admin'");
+
   ?>
 
 <body>
@@ -37,7 +39,10 @@ session_start();
                                 <i class="fa-solid fa-user"></i><a
                                         href="dashboard.php?file=profile.php&title=profile">Profile</a>
                         </div>
-
+                        <?php
+                        if(mysqli_num_rows($select_admin) > 0)
+                        {
+                        ?>
                         <div class="sidebar_menu">
                                 <i class="fa-solid fa-users"></i><a
                                         href="dashboard.php?file=users.php&title=users">Users</a>
@@ -82,17 +87,26 @@ session_start();
 
                                 </div>
                         </div>
-
+                        <?php
+                        }
+                        ?>
                         <div class="sidebar_menu">
                                 <i class="fa-solid fa-bell"></i><a
                                         href="dashboard.php?file=notification.php&title=notifications">Notifications</a>
                         </div>
 
+                        <?php
+                        if(mysqli_num_rows($select_admin) > 0)
+                        {
+                        ?>
                         <div class="sidebar_menu">
                                 <i class="fa-solid fa-comment-dots"></i><a
                                         href="dashboard.php?file=comments.php&title=comments">Comments</a>
                         </div>
 
+                        <?php
+                        }
+                        ?>
                         <div class="sidebar_menu">
                                 <i class="fa-solid fa-video"></i><a
                                         href="dashboard.php?file=tutorials.php&title=tutorials">Tutorials</a>
@@ -108,7 +122,8 @@ session_start();
 
                         <div class="title_container">
                                 <h2>
-                                        <?php echo get_title(); ?></h2>
+                                        <?php echo get_title(); ?>
+                                </h2>
                         </div>
                         <div class="main_content">
                                 <div class="message_container">

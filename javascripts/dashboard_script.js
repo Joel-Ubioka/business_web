@@ -1,3 +1,28 @@
+// Update Status
+$('.status_button').click(function(e){
+    e.preventDefault();
+
+
+    const table = $(this).attr('data-table');
+    const column = $(this).attr('data-column');
+    const id = $(this).attr('data-id');
+    const status = $(this).attr('data-status');
+
+   const ajax = new XMLHttpRequest();
+   ajax.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200)
+        {
+            console.log(this.responseText);
+        }
+   }
+   ajax.open("POST", "ajax/update_status_ajax.php", true);
+   ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+   ajax.send("table="+table+"&column="+column+"&id="+id+"&status="+status);
+});
+
+
+
+
 
 // Update profile page
 $("#profile_update_form").on("submit", function(e){

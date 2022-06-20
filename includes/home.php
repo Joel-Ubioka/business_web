@@ -1,4 +1,8 @@
   <div class="home_container">
+          <?php
+                        if(mysqli_num_rows($select_admin) > 0)
+                        {
+          ?>
           <a href="dashboard.php?file=users.php&title=users">
                   <div class="content_box box_darkblue">
                           <i class="fa-solid fa-users"></i>
@@ -25,6 +29,9 @@
 
                   </div>
           </a>
+          <?php
+                        }
+          ?>
           <a href="dashboard.php?file=tutorials.php&title=tutorials">
                   <div class="content_box box_red">
                           <i class="fa-solid fa-video"></i>

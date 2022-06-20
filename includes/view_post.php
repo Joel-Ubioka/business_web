@@ -1,1 +1,9 @@
-<h1>VIEW POST </h1>
+<?php
+if(mysqli_num_rows($select_admin) == 0)
+{
+   header('location: dashboard.php?file=home.php&title=home') ;    
+}
+else
+{
+     echo  "<h1>VIEW POSTS</h1>" ;
+}
