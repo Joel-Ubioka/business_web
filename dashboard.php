@@ -139,8 +139,9 @@ session_start();
                 </div>
         </div>
 
-        <script src="./javascripts/jquery.js"></script>
+        <script src="./javascripts/jquery.js"> </script>
         <script src="./javascripts/dashboard_script.js"></script>
+
 </body>
 
 </html>

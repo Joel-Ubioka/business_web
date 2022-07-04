@@ -7,6 +7,34 @@ if(mysqli_num_rows($select_admin) == 0)
 else
 {
 
+ // Update status
+ if(isset($_GET['admin_id']) || isset($_GET['user_id']) )
+{
+       if(isset($_GET['admin_id']))
+       {
+                $status = "Admin";
+                $update_id = $_GET['admin_id'];
+       }
+       else
+       {
+                $status = "User";
+                $update_id = $_GET['user_id'];
+       }
+       
+
+        
+        $update = mysqli_query($conn, "UPDATE users SET status = '$status' WHERE id='$update_id'");
+        if( $update)
+        {
+                echo "<p style='color:green'>Successfully Updated</p>";
+        }
+        else
+        {
+                echo "<p style='color:red'>Failed!</p>";
+        }
+}
+
+        
 // Delete User
 if(isset($_GET['delete_id']))
 {
@@ -34,7 +62,8 @@ if(mysqli_num_rows($select)>0)
         echo "<th>Full Name</th>";
         echo "<th>Email</th>";
         echo "<th>Phone Number</th>";
-        echo "<th>Proflie</th>";
+        echo "<th>Profile</th>";
+        echo "<th>Status</th>";
         echo "<th>Date Registered</th>";
         echo "<th>Time Registered</th>";
         echo "<th>Make Admin</th>";
@@ -53,6 +82,7 @@ if(mysqli_num_rows($select)>0)
         $email = $row['email'];
         $phone_number = $row['phone_number'];
         $profile = $row['profile'];
+        $status = $row['status'];
         $date = $row['date'];
         $time = $row['time'];
 
@@ -71,9 +101,18 @@ if(mysqli_num_rows($select)>0)
         echo "<td>$email</td>";
         echo "<td>$phone_number</td>";
         echo "<td><img src='images/profile/$profile'></td>";
+        echo "<td>$status</td>";
         echo "<td>$date</td>";
         echo "<td>$time</td>";
-        echo "<td><a href='#'><button class='status_button' data-table='users' data-columm='status' data-id='$id' data-status='Admin'>Make Admin</button></a></td>";
+        if( $status == "User")
+        {
+                 echo "<td><a href='dashboard.php?file=users.php&title=users&admin_id=$id'><button class='status_button' data-table='users' data-column='status' data-id='$id' data-status='Admin'>Make Admin</button></a></td>";
+        }
+       else
+       {
+                echo "<td><a href='dashboard.php?file=users.php&title=users&user_id=$id'><button class='status_button' data-table='users' data-column='status' data-id='$id' data-status='User'>Make User</button></a></td>";
+       }
+       
         echo "<td><a href='dashboard.php?file=edit_user.php&title=users&edit_id=$id'><button class='edit_button'>Edit</button></a></td>";
         echo "<td><a href='dashboard.php?file=users.php&title=users&delete_id=$id'><button class='delete_button'>Delete</button></a></td>";
         echo "</tr>";

@@ -15,5 +15,5 @@ if($update)
 }
 else
 {
-        echo "Failed!"; 
+        echo "Failed"; 
 }
