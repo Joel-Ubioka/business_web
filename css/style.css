@@ -541,6 +541,23 @@
     padding-bottom: 10px;
  }
 
+ .single_news_container .post_img
+ {
+    height: 450px;
+    overflow: hidden;
+    border-radius: 5px;
+ }
+
+ .single_post_content p
+ {
+    margin-top: 20px;
+ }
+
+ .single_news_head
+ {
+    margin-top: 20px;
+ }
+
 
  
   /*Responsive Media Querry*/
