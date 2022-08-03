@@ -66,6 +66,25 @@ session_start();
                                 </div>
                         </div>
 
+                        <div class="sidebar_menu">
+                                <div class="menu_item">
+                                        <i class="fa-solid fa-envelopes-bulk"></i><a href="#">Post categories</a>
+                                </div>
+                                <div class="dropdown">
+                                        <div class="dropdown_menu">
+                                                <i class="fa-solid fa-angle-right"></i><a
+                                                        href="dashboard.php?file=add_post_category.php&title=add-post-category">Add
+                                                        Post Category</a>
+                                        </div>
+                                        <div class="dropdown_menu">
+                                                <i class="fa-solid fa-angle-right"></i><a
+                                                        href="dashboard.php?file=view_post_categories.php&title=posts-categories">View
+                                                        Post Categories</a>
+                                        </div>
+
+                                </div>
+                        </div>
+
 
                         <div class="sidebar_menu">
 

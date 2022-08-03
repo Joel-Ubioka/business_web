@@ -1,3 +1,134 @@
+//INSERT POST 
+$('#post_form').on('submit', function(e){
+    e.preventDefault();
+     const that = this;
+
+    const post_title = $('#post_title').val();
+    const post_category = $('#post_category').val();
+    const author = $('#author').val();
+    const post_content = $('#post_content').val();
+    const post_image = $('#post_image').prop('files')[0];
+    const post_tags = $('#post_tags').val();
+    const post_status = $('#post_status').val();
+
+    const formdata = new FormData();
+
+    formdata.append("post_title", post_title);
+    formdata.append("post_category", post_category);
+    formdata.append("author", author);
+    formdata.append("post_content", post_content);
+    formdata.append("post_image", post_image);
+    formdata.append("post_tags", post_tags);
+    formdata.append("post_status",post_status);
+   
+    
+
+    $(that).children('.input_box').children('button').attr('disabled', true);
+   
+  
+    $.ajax({
+            type: "POST",
+            url: "ajax/insert_post_ajax.php",
+
+            data:formdata,
+
+            contentType:false,
+            processData:false,
+
+            success: function(response){
+
+                $(".message_container").fadeIn();
+                
+                if(response == "Successfully inserted ")
+                {
+                    $(".success_msg").fadeIn();
+                    $(".success_msg").text(response);
+                    $("#post_category").val('');
+                    setTimeout(function(){
+                        $(".message_container").fadeOut();
+                       
+                    },3000 ); 
+                }
+                else
+                {
+                    $(".fail_msg").fadeIn();
+                    $(".fail_msg").text(response);
+    
+                    setTimeout(function(){
+                        $(".message_container").fadeOut();
+                    },3000 ); 
+                }
+
+                $(that).children('.input_box').children('button').attr('disabled', false);
+            }
+    });
+});
+
+
+
+
+
+
+//INSERT POST CATEGORY
+$('#post_category_form').on('submit', function(e){
+    e.preventDefault();
+     const that = this;
+    const post_category = $("#post_category").val();
+
+    $(that).children('.input_box').children('button').attr('disabled', true);
+   
+  
+    $.ajax({
+            type: "POST",
+            url: "ajax/insert_post_category_ajax.php",
+            data: {'post_category': post_category},
+            success: function(response){
+                console.log(response);
+
+                $(".message_container").fadeIn();
+                
+                if(response == "Successfully inserted ")
+                {
+                    $(".success_msg").fadeIn();
+                    $(".success_msg").text(response);
+                    $("#post_category").val('');
+                    setTimeout(function(){
+                        $(".message_container").fadeOut();
+                       
+                    },3000 ); 
+                    $(that).children('.input_box').children('button').attr('disabled', false);
+                }
+                else
+                {
+                    $(".fail_msg").fadeIn();
+                    $(".fail_msg").text(response);
+    
+                    setTimeout(function(){
+                        $(".message_container").fadeOut();
+                    },3000 ); 
+                }
+            }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Update Status
 $('.status_button').click(function(e){
     e.preventDefault();
@@ -21,8 +152,7 @@ $('.status_button').click(function(e){
 
                 setTimeout(function(){
                     $(".message_container").fadeOut();
-                    window.location.reload();
-                },3000 );
+                },3000 ); 
             }
             else
             {

@@ -176,6 +176,72 @@
                                         </p>
 
 
+                                        <!--    COMMENT SECTION -->
+                                        <div class="comment_container">
+                                                <h3>COMMENTS</h3>
+                                                <div class="comment_content">
+                                                        <div class="comment_img">
+                                                                <img src="./images/profile/profile.png" alt="">
+                                                        </div>
+                                                        <div class="comment_text">
+                                                                <p>This is an awesome article. Thumbs up!</p>
+                                                                <small>Morrhtech Solutions</small>
+                                                        </div>
+                                                </div>
+
+                                                <div class="comment_content">
+                                                        <div class="comment_img">
+                                                                <img src="./images/profile/profile.png" alt="">
+                                                        </div>
+                                                        <div class="comment_text">
+                                                                <p>This is an awesome article. Thumbs up!</p>
+                                                                <small>Morrhtech Solutions</small>
+                                                        </div>
+                                                </div>
+
+                                                <div class="comment_content">
+                                                        <div class="comment_img">
+                                                                <img src="./images/profile/profile.png" alt="">
+                                                        </div>
+                                                        <div class="comment_text">
+                                                                <p>This is an awesome article. Thumbs up!</p>
+                                                                <small>Morrhtech Solutions</small>
+                                                        </div>
+                                                </div>
+                                                <div class="comment_form">
+                                                        <form method="POST" id="comment_form">
+                                                                <h3>Post Your Comments</h3>
+                                                                <div class="input_box">
+                                                                        <label for="name">YOUR NAME</label>
+                                                                        <input type="text" name="name"
+                                                                                class="form_input" id="name">
+                                                                </div>
+
+                                                                <div class="input_box">
+                                                                        <label for="email">YOUR EMAIL</label>
+                                                                        <input type="email" name="email"
+                                                                                class="form_input" id="email">
+                                                                </div>
+
+                                                                <div class="input_box">
+                                                                        <label for="comment">YOUR COMMENT</label>
+                                                                        <textarea name="comment" id="comment"
+                                                                                class="form_input" cols="20"
+                                                                                rows="15"></textarea>
+                                                                </div>
+
+                                                                <div class="input_box">
+                                                                        <button type="submit" name="submit"
+                                                                                id="post_comment"
+                                                                                class="form_button">Post
+                                                                                Comment</button>
+                                                                </div>
+
+
+                                                        </form>
+
+                                                </div>
+                                        </div>
                                 </div>
                         </div>
 
