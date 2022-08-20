@@ -9,134 +9,23 @@
         <link rel="stylesheet" href="css/style.css">
 </head>
 
+<?php 
+require "includes/header2.php"; 
+require "config/config.php"; 
+require "functions/functions.php";
+
+
+?>
+
 <body>
-        <?php require "includes/header2.php"; ?>
+
         <!-- <div class="title">Latest News About Morrhtech Solutions</div> -->
         <div class="main_container">
 
                 <div class="main_body">
 
-                        <div class="post_container">
+                        <?php echo fetch_all_posts(); ?>
 
-                                <div class="post_img">
-                                        <img src="./images/blog1.png" alt="">
-                                </div>
-                                <div class="post_content">
-                                        <h2 class="blog_head">Heading of the blog post</h2>
-                                        <small>By Morrhtech Solutions, </small>
-                                        <small>2 hours ago</small>
-                                        <p>It is a long established fact that a reader will be distracted by the
-                                                readable content of a page when looking at its layout. The point
-                                                of
-                                                using Lorem Ipsum is that it has a more-or-less normal
-                                                distribution of
-                                                letters, as opposed to using 'Content here, content here',
-                                                making it
-                                                look like readable English. Many desktop publishing packages and
-                                                web
-                                                page editors now use Lorem Ipsum as their default model text,
-                                                and a
-                                                search for 'lorem ipsum' will uncover many web sites still in
-                                                their
-                                                infancy. Various versions have evolved over the years, sometimes
-                                                by
-                                                accident, sometimes on purpose (injected humour and the like).
-                                        </p>
-                                        <a href="single_news.php"><button class="read_more">Read More</button></a>
-                                </div>
-                        </div>
-
-                        <div class="post_container">
-
-                                <div class="post_img">
-                                        <img src="./images/blog1.png" alt="">
-                                </div>
-                                <div class="post_content">
-                                        <h2 class="blog_head">Heading of the blog post</h2>
-                                        <small>By Morrhtech Solutions, </small>
-                                        <small>2 hours ago</small>
-                                        <p>It is a long established fact that a reader will be distracted by the
-                                                readable content of a page when looking at its layout. The point
-                                                of
-                                                using Lorem Ipsum is that it has a more-or-less normal
-                                                distribution of
-                                                letters, as opposed to using 'Content here, content here',
-                                                making it
-                                                look like readable English. Many desktop publishing packages and
-                                                web
-                                                page editors now use Lorem Ipsum as their default model text,
-                                                and a
-                                                search for 'lorem ipsum' will uncover many web sites still in
-                                                their
-                                                infancy. Various versions have evolved over the years, sometimes
-                                                by
-                                                accident, sometimes on purpose (injected humour and the like).
-                                        </p>
-                                        <a href="single_news.php"><button class="read_more">Read More</button></a>
-                                </div>
-                        </div>
-
-
-                        <div class="post_container">
-
-                                <div class="post_img">
-                                        <img src="./images/blog1.png" alt="">
-                                </div>
-                                <div class="post_content">
-                                        <h2 class="blog_head">Heading of the blog post</h2>
-                                        <small>By Morrhtech Solutions, </small>
-                                        <small>2 hours ago</small>
-                                        <p>It is a long established fact that a reader will be distracted by the
-                                                readable content of a page when looking at its layout. The point
-                                                of
-                                                using Lorem Ipsum is that it has a more-or-less normal
-                                                distribution of
-                                                letters, as opposed to using 'Content here, content here',
-                                                making it
-                                                look like readable English. Many desktop publishing packages and
-                                                web
-                                                page editors now use Lorem Ipsum as their default model text,
-                                                and a
-                                                search for 'lorem ipsum' will uncover many web sites still in
-                                                their
-                                                infancy. Various versions have evolved over the years, sometimes
-                                                by
-                                                accident, sometimes on purpose (injected humour and the like).
-                                        </p>
-                                        <a href="single_news.php"><button class="read_more">Read More</button></a>
-                                </div>
-                        </div>
-
-
-                        <div class="post_container">
-
-                                <div class="post_img">
-                                        <img src="./images/blog1.png" alt="">
-                                </div>
-                                <div class="post_content">
-                                        <h2 class="blog_head">Heading of the blog post</h2>
-                                        <small>By Morrhtech Solutions, </small>
-                                        <small>2 hours ago</small>
-                                        <p>It is a long established fact that a reader will be distracted by the
-                                                readable content of a page when looking at its layout. The point
-                                                of
-                                                using Lorem Ipsum is that it has a more-or-less normal
-                                                distribution of
-                                                letters, as opposed to using 'Content here, content here',
-                                                making it
-                                                look like readable English. Many desktop publishing packages and
-                                                web
-                                                page editors now use Lorem Ipsum as their default model text,
-                                                and a
-                                                search for 'lorem ipsum' will uncover many web sites still in
-                                                their
-                                                infancy. Various versions have evolved over the years, sometimes
-                                                by
-                                                accident, sometimes on purpose (injected humour and the like).
-                                        </p>
-                                        <a href="single_news.php"><button class="read_more">Read More</button></a>
-                                </div>
-                        </div>
 
 
                 </div>

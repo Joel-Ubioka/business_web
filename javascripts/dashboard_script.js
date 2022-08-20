@@ -11,6 +11,8 @@ $('#post_form').on('submit', function(e){
     const post_tags = $('#post_tags').val();
     const post_status = $('#post_status').val();
 
+   
+
     const formdata = new FormData();
 
     formdata.append("post_title", post_title);
@@ -52,8 +54,7 @@ $('#post_form').on('submit', function(e){
                 else
                 {
                     $(".fail_msg").fadeIn();
-                    $(".fail_msg").text(response);
-    
+                    $(".fail_msg").text(response); 
                     setTimeout(function(){
                         $(".message_container").fadeOut();
                     },3000 ); 

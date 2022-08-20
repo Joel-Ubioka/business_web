@@ -32,10 +32,10 @@ $image_type = $post_image['type'];
 $img_array = explode('.', $image_name);
 $img_ext = strtolower(end($img_array));
 
-$new_image_name = $img_array [0]."_".uniqid();
+$new_image_name = $img_array [0]."_".uniqid().$img_ext;
 $file_destination = "../images/post_images/$new_image_name";
 
-$allowed = array('jpg', 'jpeg', 'png', 'gif');
+$allowed = array('jpg', 'jpeg', 'png', 'gif', 'webp');
 
 
 
@@ -74,7 +74,7 @@ else
                 
                   // insert the post
         
-                $insert = mysqli_query($conn, "INSERT INTO posts (post_title, post_category_id, post_author, post_content, post_image, post_tags, post_status, post_date, post_time) VALUES('$post_title', '$post_category_id', '$author', '$post_content', '$post_content', '$new_image_name', '$post_tags', '$post_status', '$date', '$time'");
+                $insert = mysqli_query($conn, "INSERT INTO posts (post_title, post_category_id, post_author, post_content, post_image, post_tags, post_status, post_date, post_time) VALUES('$post_title', '$post_category_id', '$author', '$post_content', '$new_image_name', '$post_tags', '$post_status', '$date', '$time')");
                 if($insert)
                 {
                         echo "successfully inserted";

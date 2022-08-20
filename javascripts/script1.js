@@ -1,63 +1,58 @@
 
 
+//INSERT COMMENTS
+$('#comment_form').on('submit', function(e){
+    e.preventDefault();
 
+     const that = this;
 
+    const name = $('#name').val();
+    const email = $('#email').val();
+    const comment = $('#comment').val();
+    const post_id = $('#post_id').val();
 
+    $(that).children('.input_box').children('button').attr('disabled', true);
+   
+  
+    $.ajax({
+            type: "POST",
+            url: "ajax/insert_comment_ajax.php",
+            data: {'name':name,
+                    'email':email,
+                    'comment': comment,
+                    'post_id': post_id
+        
+            },
+            success: function(response){
+            $(that).children('.input_box').children('button').attr('disabled', false);
 
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-// this is controlling the datajson and courses_process.php so just uncommnet only this;
-const costCourse = {HTML:10000, CSS:5000, JavaScript:20000};
-const costCourseStr = JSON.stringify(costCourse);
-window.location = "courses_process.php?coursesCost="+costCourseStr
-
-
-
-
-
-
-
-const ajax = new XMLHttpRequest();
-ajax.onload = function(){
- const dataObj = JSON.parse(this.responseText );
- console.log(dataObj.age);
-}
-ajax.open("GET", "javascripts/data_type.json");
-ajax.send();
-*/
-
-
-
-
-
-
-// JSON object literal
-/*
-const courses = ["HTML", "CSS", "JavaScript"]  ;
-
-
-console.log(courses[2]);
-
-*/
-
-
-
-
-
-
-
-
+                $(".message_container").fadeIn();
+                
+                if(response == "Successfully Posted!")
+                {
+                    $(".success_msg").fadeIn();
+                    $(".success_msg").text(response);
+                   
+                    $("#comment").val('');
+                   
+                    setTimeout(function(){
+                        $(".message_container").fadeOut();
+                       
+                    },3000 ); 
+           
+                }
+                else
+                {
+                    $(".fail_msg").fadeIn();
+                    $(".fail_msg").text(response);
+    
+                    setTimeout(function(){
+                        $(".message_container").fadeOut();
+                    },3000 ); 
+                }
+            }
+    });
+});
 
 
 $("#register_form").on("submit", function(e){
